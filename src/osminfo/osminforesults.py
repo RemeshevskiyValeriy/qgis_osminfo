@@ -174,30 +174,30 @@ class OsmInfoResultsDock(QgsDockWidget, FORM_CLASS):
 
     def show_info(self) -> None:
         black_friday_start = datetime(
-            year=2024, month=11, day=26, hour=21, minute=1, tzinfo=timezone.utc
+            year=2025, month=12, day=1, hour=6, minute=1, tzinfo=timezone.utc
         ).timestamp()
         black_friday_finish = datetime(
-            year=2024, month=12, day=3, hour=5, minute=59, tzinfo=timezone.utc
+            year=2025, month=12, day=6, hour=5, minute=59, tzinfo=timezone.utc
         ).timestamp()
 
         now = datetime.now().timestamp()
 
         is_black_friday = black_friday_start <= now <= black_friday_finish
 
-        campaign = "constant" if not is_black_friday else "black-friday24"
+        campaign = "constant" if not is_black_friday else "black-friday25"
         utm = f"utm_source=qgis_plugin&utm_medium=banner&utm_campaign={campaign}&utm_term=osminfo&utm_content={self.qgisLocale}"
 
         info = {
             "constant": self.tr(
                 '<a href="https://data.nextgis.com/?{utm}">Download geodata</a> for your project'
             ).format(utm=utm),
-            "black-friday24": self.tr(
+            "black-friday25": self.tr(
                 '<a href="https://data.nextgis.com/?{utm}">Fresh geodata</a> for your project <b>(50% off!)</b>'
             ).format(utm=utm),
         }
         icon = {
             "constant": ":/plugins/osminfo/icons/news.png",
-            "black-friday24": ":/plugins/osminfo/icons/fire.png",
+            "black-friday25": ":/plugins/osminfo/icons/fire.png",
         }
         html = f"""
             <html>
