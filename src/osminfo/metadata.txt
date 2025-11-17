@@ -5,7 +5,7 @@ description[ru]=Получите полную информацию о точке
 about=For a selected point, extract all information abour nearby and enclosing features from OpenStreetMap database using Overpass API.
 about[ru]=Для выбранной точки извлеките всю информацию о близлежащих и окружающих объектах из базы данных OpenStreetMap, используя Overpass API.
 category=Vector
-version=1.2.1
+version=1.2.2
 qgisMinimumVersion=3.22
 qgisMaximumVersion=4.99
 
@@ -28,6 +28,8 @@ deprecated=False
 supportsQt6=True
 
 changelog=
+    1.2.2
+        * Updated plugin info
     1.2.1
         * Increased maximum supported QGIS version to 4.99
     1.2.0
